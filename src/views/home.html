@@ -1,12 +1,13 @@
 <template>
     <require from="styles/home.css"></require>
     <div class="home-wrapper">
-            <div class="t-a-c m-t-lg w-100">
-                    <div class="bg-c-white t-s-xxl p-a-md t-c-primary">TALK</div>
-            </div>
+        <div if.bind="stage == 1">
+        <div class="t-a-c m-t-lg w-100">
+                <div class="bg-c-white t-s-xxl p-a-md t-c-primary">TALK</div>
+        </div>
 
         <div class="t-a-c m-t-lg">
-            <select class="t-s-xl t-c-white">
+            <select class="t-s-xl t-c-white bg-c-primary">
                 <option>Svenska</option>
                 <option>Suomi</option>
                 <option>English</option>
@@ -18,6 +19,13 @@
         <div class="t-a-c m-t-lg w-100">
                 <div class="bg-c-primary t-s-md p-a-md t-c-white">What is this?</div>
         </div>
+    </div>
+    <div if.bind="stage == 2">
 
+    </div>
+
+    <div if.bind="stage == 3">
+            
+    </div>
     </div>
 </template>
