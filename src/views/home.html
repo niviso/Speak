@@ -1,27 +1,35 @@
 <template>
     <require from="styles/home.css"></require>
     <div class="home-wrapper">
-        <div if.bind="stage == 1">
+        <div if.bind="stage == 1" class="w-100">
         <div class="t-a-c m-t-lg w-100">
                 <div class="bg-c-white t-s-xxl p-a-md t-c-primary">TALK</div>
         </div>
 
         <div class="t-a-c m-t-lg">
-            <select class="t-s-xl t-c-white bg-c-primary">
+            <select class="t-s-xl t-c-white bg-c-primary" value.bind="selectedLanguage" change.trigger="changeLangugage($event)">
                 <option>Svenska</option>
                 <option>Suomi</option>
                 <option>English</option>
             </select>
         </div>
-        <div class="t-a-c m-t-lg w-100">
+        <div class="t-a-c m-t-lg w-100" click.trigger="next()">
                 <div class="bg-c-white t-s-xxl p-a-md t-c-primary c-p">NOW</div>
         </div>
         <div class="t-a-c m-t-lg w-100">
                 <div class="bg-c-primary t-s-md p-a-md t-c-white">What is this?</div>
         </div>
     </div>
-    <div if.bind="stage == 2">
-
+    <div if.bind="stage == 2" class="w-100">
+            <div class="t-a-c m-t-lg w-100">
+                    <input type="text" class="bg-c-white t-s-lg p-a-md t-c-primary c-p t-a-c" placeholder="CODE">
+            </div>
+            <div class="t-a-c m-t-lg w-100" click.trigger="next()">
+                    <div class="bg-c-white t-s-xxl p-a-md t-c-primary c-p">JOIN</div>
+            </div>
+            <div class="t-a-c m-t-lg w-100">
+                    <div class="bg-c-primary t-s-md p-a-md t-c-white">Or create a new room?</div>
+            </div>
     </div>
 
     <div if.bind="stage == 3">
