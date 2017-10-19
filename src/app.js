@@ -16,6 +16,7 @@ export class App {
     config.title = 'Beyond';
     config.map([
       {route: ['/'], name: 'home', moduleId: 'views/home', nav: true, title: 'Home'},
+      {route: 'room/:id',  name: 'room', moduleId: 'views/room', nav: true, title: 'Room',href: '/room'}
      /*  {route: 'blog/:id',  name: 'bloggs', moduleId: 'blog/blog', nav: true, title: 'BLOGG',href: '/blog'},
       {route: 'blog/:id/beta',  name: 'preview', moduleId: 'blog/blog-preview', nav: true, title: 'BLOGG',href: '/beta'},
       {route: 'blog/:id/post/:postid',  name: 'post', moduleId: 'blog/blog', nav: true, title: '',href: '#/post'},

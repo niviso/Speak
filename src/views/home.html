@@ -22,12 +22,12 @@
     </div>
     <div if.bind="stage == 2" class="w-100">
             <div class="t-a-c m-t-lg w-100">
-                    <input type="text" class="bg-c-white t-s-lg p-a-md t-c-primary c-p t-a-c" placeholder="CODE">
+                    <input type="text" class="bg-c-white t-s-lg p-a-md t-c-primary c-p t-a-c" value.bind="code" placeholder="CODE">
             </div>
             <div class="t-a-c m-t-lg w-100" click.trigger="next()">
                     <div class="bg-c-white t-s-xxl p-a-md t-c-primary c-p">JOIN</div>
             </div>
-            <div class="t-a-c m-t-lg w-100">
+            <div class="t-a-c m-t-lg w-100" click.trigger="next()">
                     <div class="bg-c-primary t-s-md p-a-md t-c-white">Or create a new room?</div>
             </div>
     </div>
