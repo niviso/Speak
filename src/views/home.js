@@ -21,10 +21,10 @@ export class Home{
 
     create(){
         if(this.code){
-            window.location ="/room/" + this.code;
+            window.location ="#/room/" + this.code;
         } else {
             this.code = this.generateNewRoom();
-            window.location ="/room/" + this.code;
+            window.location ="#/room/" + this.code;
 
         }
     }

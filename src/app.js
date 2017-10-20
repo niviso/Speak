@@ -15,7 +15,7 @@ export class App {
   configureRouter(config, router) {
     config.title = 'Beyond';
     config.map([
-      {route: [''], name: 'home', moduleId: 'views/room', nav: true, title: 'Home'},
+      {route: [''], name: 'home', moduleId: 'views/home', nav: true, title: 'Home'},
       {
         route: 'room/:code',
         name: 'room',
