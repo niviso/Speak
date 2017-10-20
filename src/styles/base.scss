@@ -94,6 +94,9 @@ svg {
    right:0;
    pointer-events: none;
  }
+ circle{
+     stroke: $white;
+ }
  img:focus,  button:focus{
      outline: 0;
  }

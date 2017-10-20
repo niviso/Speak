@@ -49,6 +49,7 @@ export class Room{
 
             this.recognition.onresult = function (event) {
                 var interim_transcript = '';
+
                 if (typeof (event.results) == 'undefined') {
                     controller.recognition.onend = null;
                     controller.recognition.stop();
@@ -84,6 +85,7 @@ export class Room{
         return s.replace(first_char, function (m) { return m.toUpperCase(); });
     }
     startButton(event) {
+        this.result = false;
         console.log("START");
         if (this.recognizing) {
             this.recognition.stop();
