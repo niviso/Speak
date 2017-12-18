@@ -40,7 +40,7 @@ export class Room{
                 }
             };
 
-            this.recognition.onend = function () {
+            this.recognition.onend = function (event) {
                 controller.recognizing = false;
                 if (controller.ignore_onend) {
                     return;
@@ -80,6 +80,8 @@ export class Room{
         }
         this.previous_transcript = this.current_transcript;
         }
+    }
+    getTranscript(){
     }
     capitalize(s) {
         return s.replace(first_char, function (m) { return m.toUpperCase(); });

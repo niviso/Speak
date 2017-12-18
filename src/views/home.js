@@ -6,7 +6,9 @@ export class Home{
     }
 
     attached(){
-        
+        var msg = new SpeechSynthesisUtterance("Hello biscuit");
+        window.speechSynthesis.lang = "sv-SE";
+        window.speechSynthesis.speak(msg);
     }
     changeLangugage(){
         console.log(this.selectedLanguage);
